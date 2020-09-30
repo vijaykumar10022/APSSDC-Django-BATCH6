@@ -1,0 +1,86 @@
+Good Morning to all...!!!
+
+Agenda:
+	-->constructor
+		-->it is a special kind of method in python
+		-->so we can create constructor by using def keyword
+		-->name of the constructor shold be __init__(self)
+		-->self is the first parameter in constructor
+		-->the main purpose of constructor is to be inilize instance vaiables at class 	variables 
+		-->it is automatically executed at the time of object creation
+		syntax:
+			def __init__(self):
+				variables
+				methods
+		ex:
+			class Demo:
+				def __init__(self):
+					print("I am from Construtor")
+					
+	
+	-->inheritance
+			Acquiring the properties& actions from Parent class to child class
+							variables & methods
+							
+			-->single level
+					syntax:
+						class parentclassname:
+							variables
+							methods
+						class childeclassname(parentclass):
+								variables
+								methods
+								
+					ex:
+					class parent:
+						myvar1="i am variable from parent class"
+						def myfun1(self):
+							print("i am from parent class")
+					class child(parent):
+						  myvar2=
+			-->multi level
+				syntax:
+					class A:
+						statements
+					class B(A):
+						statements
+					class C(B):
+						statemnts
+			-->multiple level
+					one child with multiple parents
+					syntax:
+						class A:
+							statements
+						class B:
+							statemnts
+						class C(A,B):
+							statements
+			-->hierachy level:
+					one parent mutiple childs
+					syntax:
+						class A:
+							statements
+							len()-->9
+						class B(A):
+							statements
+							ababcabcdf
+							a-->3
+							b-->3
+							c-->2
+							
+						class C(A):
+							statements
+							duplicates("ababcabcdfadfsadbja"
+							
+				obj=C()
+				obj.duplicates("ababcabcdf") # abcdf
+				
+			-->hybrid(multiple+hierachy)
+	
+	
+	
+	
+	-->django environment setup
+		-->project creation
+		-->app creation
+		

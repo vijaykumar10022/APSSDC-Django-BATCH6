@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>:: Mail Sending ::</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	{% if messages %}
+		{% for e in messages %}
+			<div class="alert alert-{{e.tags}} alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				{{e}}
+			</div>
+		{% endfor %}
+	{% endif %}
+	<div class="card col-md-6 mt-5 mx-auto">
+		<div class="card-body">
+			<h2 class="bg-primary text-light text-center p-3">Mail sending</h2>
+			<form method="POST">
+				{% csrf_token %}
+				<input type="text" name="sdml" placeholder="Enter Your Mailid" class="form-control mb-2">
+				<input type="text" name="sb" placeholder="Enter Subject" class="form-control mb-2">
+				<textarea name="mg" placeholder="Enter a message" class="form-control mb-2"></textarea>
+				<input type="submit" class="btn btn-success" value="send">
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+Day-12:
+	Agenda:
+		ORM(Object Relational Modeling)
+				-->one to one Relation
+				-->one to many Relation
+				-->many to many Relation
+						  
+		-->Model Qreries(using Shell)
+				insert:
+						python manage.py shell
+						two orm Queries
+						from appname.models import modelname
+					1).
+						obj=model(name=value,age=value,roll=value,phno=value)
+						obj.save()
+						ex:
+							data=student(name="vijay",age=25,roll="122A5A0505",phno=9876543210)
+							data.save()
+					2).
+						model.objects.create(name=value,age=value,roll=value,phno=value)
+						ex:
+				     	student.objects.create(name="vijay",age=25,roll="122A5A0505",phno=9876543210)
+				Display:
+						-->all the data
+							obj=model.objects.all()
+							print(obj)
+							for data in obj:
+								print(data.name)
+								print(data.age)
+								print(data.roll)
+								print(data.phno)
+						ex:
+							data=student.objects.all()
+							for d in data:
+								print(data.name,data.age,data.roll,data.phno)
+
+						-->individual single row information 
+							obj=model.objects.get(name=value)
+							obj=model.objects.get(age=value)
+							obj=model.objects.get(roll=value)
+							obj=model.objects.get(id=value)
+						ex:
+							data=student.objects.get(id=1)
+							print(data.name,data.age,data.roll,data.phno)
+						data=student.objects.get(id=1,name="vijay")
+						print(data.name,data.age,data.roll,data.phno)
+						-->to display multiple similar data 
+								obj=model.objects.filter(age=21)
+								for d in obj:
+									print(d.name,d.age,d.roll,d.phno)
+						-->if you want to access first row info
+							obj=model.objects.first()
+							ex:
+							info=student.objects.first()
+							print(info.name,info.age,info.roll,info.phno)
+						-->if you want to access last 
+							obj=model.objects.last()
+							ex:
+							info=studnet.objects.last()
+							print(info.name,info.age,info.roll,info.phno)
+						
+						-->to access particular range data
+							obj=model.objects.all()[:2]
+							for data in obj:
+								print(data.name,data.age,data.roll)
+							
+				->Delete
+					-->individual row information
+						obj=model.objects.get(name="vijay")
+						obj.delete()
+					-->multiple similar information
+						obj=model.objects.filter(age=21)
+						obj.delete()
+					-->first data
+						obj=model.objects.first()
+						obj.delete()
+					-->last data
+						obj=model.objects.last()
+						obj.delete()
+					-->obj=model.objects.all()[2:4]
+						obj.delete()
+						
+			-->Edit/Update
+					-->individual data
+						obj=model.objects.get(name="Murali")
+						obj.phno=963214587
+						obj.save()
+						
+		-->project implementation 
+				-->CRUD operations
+					->Insert
+					->Retrive
+					->Update
+					->Delete
+	-->Wait for few minutes

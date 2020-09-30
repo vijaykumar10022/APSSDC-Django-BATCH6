@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Register::</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container text-center">
+			<h1 class="text-primary">Register</h1>
+		<table class="table table-borderless">
+			<form action="{% url 'rg' %}" method="POST">
+				{% csrf_token %}
+				<div class="row p-5" >
+					<div class="col-md-4">
+						<input class="form-control" type="text" name="cname" placeholder="Enter College Name">
+					</div>
+					<div class="col-md-4">
+						<input type="text" name="name" class="form-control" placeholder="Enter Name">
+					</div>
+					<div class="col-md-4">
+						<input type="text" name="roll" placeholder="Enter Roll Number" class="form-control">
+					</div>
+				</div>
+				<div class="row p-5">
+					<div class="col-md-6">
+						<input class="form-control" type="text" name="branch" placeholder="Enter your branch">
+					</div>
+					<div class="col-md-6">
+						<input class="form-control" type="text" name="year" placeholder="Enter your year">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<input type="submit" class="btn btn-info text-center" value="Register">
+					</div>
+					<div class="col-md-4">
+					</div>
+				</div>
+			</form>
+		</table>
+	</div>	
+</body>
+</html>

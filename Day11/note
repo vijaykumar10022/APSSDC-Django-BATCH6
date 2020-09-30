@@ -1,0 +1,36 @@
+APSSDC-Django
+-------------
+Please join my meeting from your computer, tablet or smartphone. from Tommorrow onwords
+
+https://global.gotomeeting.com/join/121840285
+
+Access Code: 121-840-285
+
+Attendance:-->
+				above 90 min
+
+Day-11:
+	Agenda:
+		-->superuser creation(admin)
+				-->college
+						-->admin -->1
+						-->faculty-->2
+						-->students-->3
+			- while running the server db.sqlite3 file is automatically created with in project location
+		--> after db.sqlite is emty
+		-->djnago can provide default some table structure
+		-->need convert tables provided by django
+				python manage.py migrate
+					-->interface to tables(sql)
+		-->online 
+				-->https://sqliteonline.com/
+		-->offline
+				-->django provide deafault interface
+				-->we one s/w i.e db browser
+						
+		-->Model creation
+		-->Migrations,ORM
+		-->Model Queries(Django Shell)
+		wait for few minutes others can join the session
+
+

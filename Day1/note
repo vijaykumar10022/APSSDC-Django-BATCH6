@@ -1,0 +1,99 @@
+
+
+
+
+Object-Oriented
+Programming(Classes,Objects)
+
+class :
+		class is nothing but it is a one design
+										Designs
+	-->a class is a specification (idea/plan/theory)
+	of properties and actions of objects
+	-->varaibles(properties) and methods (actions)
+	
+example:
+	Design
+			construct house
+			
+			
+		plan-->design(2bedrooms,1 kichen,one hall,2 balc,parking etc)
+				
+			design:
+					house1-->2bedrooms,1 kichen,one hall,2 
+					house2-->2bedrooms,1 kichen,one hall,2 
+					house3-->2bedrooms,1 kichen,one hall,2 
+				
+			
+sytax:
+	class classname:
+		varaibles
+		methods
+
+method:funtion with in class we are call it is  method
+def myfun():# function
+	print("Hello")
+class Demo:
+	myvar1=10
+	myvar2=20
+	def myfun1(self): # method
+		print("Hello")
+	def myfun2(self):
+		print("Hi hello")
+		
+Demo.myvar1
+	10
+Demo.myvar2
+	20
+Demo.myfun1()
+	Hello
+Demo.myfun2()
+	Hi hello
+
+object:
+	instace of class variables and methods
+	grouped items
+	syatax:
+		obj=classname()
+		obj.myvar1
+		obj.myvar2
+		obj.myfun1
+		obj.myfun2
+	
+	
+s/w requirements:
+	one editor,one compiller
+	edittors(notepad,geany,sublime,pycharm,vscode)
+	compiller(python 3.6 to 3.8)
+	
+	packeges:
+			django
+			mysqlclient
+			pillow
+	s/w:Db browser
+		sublime editor
+		xampp
+		git
+		heroku
+		
+Tree Architechture
+	project
+		app1
+		app2
+		app3
+		
+Web development:
+
+fornt end:Html,Bootstrap,Js etc
+
+Back end:Python
+
+
+
+		
+	
+
+	
+	
+	
+		

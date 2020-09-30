@@ -1,0 +1,5 @@
+// alert("Welcome to APSSDC")
+// prompt("Hai")
+var a = prompt("Enter a name")
+var b = prompt("Enter a name")
+document.write(a+ " "+b)

@@ -1,0 +1,10 @@
+Day-13:
+	Agenda:
+		-->project implementation 
+				-->CRUD operations
+					->Insert
+					->Retrive/Display
+					->Update/edit
+					->Delete
+		-->Django Forms&Validations
+			

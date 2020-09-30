@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>:: Update Data by Forms ::</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="card col-md-6 mx-auto mt-5 border-radius rounded">
+			<div class="card-body">
+				<form method="POST">
+					{% csrf_token %}
+				<h2 class="bg-success text-light p-3"> Update Details </h2>
+				{{d.as_p}}
+				<input type="submit" class="btn btn-warning" value="Update">
+			</form>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

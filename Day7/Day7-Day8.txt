@@ -1,0 +1,59 @@
+9-21-2020
+-----------------------------------
+Good Morning to all
+Today‘s Agenda 
+----------------------------
+Javascript file
+ ---> oops
+---> interactive website
+---> interpreter
+Static ---> 
+Internal
+	<head>
+		<script>
+		</script>
+	</head>
+	<body>
+		<script>
+		</script>
+
+	</body>
+External
+	Static ---> js ---> file
+	{% load static %}
+	
+Enter name --->  python
+Enter name → Django
+
+python  Django
+	
+
+
+Enter a number  :  33
+Enter b value :  55
+Sume → 88
+
+Bootstrap
+→ it has predefined tags with responsive
+→ online
+	
+→ offline
+
+9/22/2020
+---------------------------------
+Good Morning to all ……
+Registration form
+Input---
+	name 
+	Mail id
+	Phone number
+textarea
+	Address
+Gender
+	M
+	F
+Button → submit, cancel, reset….
+Methods:
+Get 
+Post
+

@@ -1,0 +1,220 @@
+
+16-09-2020:
+===========
+
+	Good Morning to All
+	
+	framework -> existing => user requirement changes [php,.net,java,python]
+	
+	
+	 
+	Django: -> python [flask,bottle]
+	
+	- webapplication framework
+	- easy to create web apps
+	- code reuseablility
+	- builtin packages and modules
+	
+	MVC and MVT
+	===========
+	
+	MVC => Model View Controller
+	M - Model
+	V - View
+	C - Controller
+	
+	Model => Database[table,field,alter][mysql,sqlite3,postgres,monogodb,Nosql]
+	
+	View => .html[userview],css,jquery
+	
+	Controller => [logics .php,.java,.py] -> controll all the functions and methods
+	
+	MVT => Model View Template
+	M - Model
+	V - View [Controller]
+	T - Template
+	
+	M => Database
+	V => Controller [.py][views.py,urls.py]
+	T => Template [DTL,.html] [Django Template Language]
+	
+	Django Installations:
+	---------------------
+	
+	-> cmd 
+		-> check python version
+			=> python -V
+			=> version is displayed [X V-> environement variables => path -> X]
+	
+	-> pip install django==3.0
+		-> check django version
+			=> django-admin --version
+			
+17-09-2020:
+===========
+	
+	Good Morning to All....
+	
+	-> cmd
+		-> python -V
+	-> cmd
+		-> any location django installation
+			-> pip install django [latest version]
+			-> pip install django==3.0
+		-> django installation check
+			-> django-admin --version
+
+		-> python
+		-> >>> import django
+		-> >>> django.get__version__ 
+	
+	Django Project creation
+	=======================
+	
+	-> drive select
+		-> sip-6 => cmd
+			-> django-admin startproject "projectname" [syntax]
+			
+			-> django-admin startproject apssdc
+		sip-6/apssdc
+			/ apssdc [ folder ] [Admin app]
+			/ manage.py [python file] first
+			/ db.sqlite3
+	-> Manage.py
+		-> manage.py startapp "appname"
+		-> manage.py runserver
+		-> manage.py makemigrations
+		-> manage.py migrate
+		-> manage.py shell  
+	-> apssdc[Admin app]
+		-> init -> python interpreter
+		-> asgi -> asynchronous gateway interface -> deployement
+		-> settings -> css,image,.html,mail,app,database[sqlite3]
+		-> urls -> url existing -> display -> X[errors]
+		-> wsgi -> web socket gateway interface -> deployment
+	
+	Running Server:
+	===============
+	-> first select manage.py path location
+	-> open the path in cmd
+		-> manage.py runserver
+		-> python manage.py runserver
+		
+		-> http://127.0.0.1/8000/
+		-> localhost <=> 127.0.0.1
+		-> 8000 => django-port[default port]
+		
+		=> manage.py runserver 1234
+		                       9999
+	
+	=> manage.py services
+		
+	Userapp creation:
+	================
+	-> cmd => manage.py
+	-> Have to stop server stop
+	-> manage.py startapp "appname" [syntax]
+	-> manage.py startapp demo
+	-> python manage.py startapp demo
+	
+	Userapp files:
+	==============
+	=> migrations[database]
+	-> init -> python
+	-> admin -> table access
+	-> apps -> configurations
+	-> models -> database => tables,fields,alter
+	-> tests -> testing => deployment => unit
+	-> views -> Controller [Logic => function -> ?]
+	
+	Userapp configurations:
+	======================
+	
+	-> settings => Installed_apps => register
+	
+	-> urls => first file [x]
+		
+		=> path('pathname',module.functionname,name="userdefined name"),
+	
+	=> url => views => browser
+	
+30-09-2020:
+==========
+	
+	Good Morning to All....
+	
+	url -> views -> (response)
+	url -> views -> templates(.html)
+	url -> views -> templates(reg) -> views -> templates(welcome)
+	url -> views -> templates(re) -> views -> models -> templates
+	url -> views -> templates(re) -> views -> forms -> models   		
+								  -> views -> models -> html
+	
+	
+Messages:
+=========
+	
+	alert -> update (20% warning)
+	
+	update
+	delete
+	user login -> views
+	
+	success
+	warning 
+	debug
+	info
+	
+from django.contrib import messages
+
+
+	messages.success(request,"data to be displayed to user")
+	
+	
+html:
+=====
+	{% if messages %}
+	{% for e in messages %}
+	<div class="alert alert-{{e.tags}}">
+	{{e}}
+	</div>
+	{% endfor %}
+	{% endif %}
+
+Mail sending:
+=============
+
+	sender => 500 mails per/day
+	receiver
+	
+	python -> 1 -> 500
+			  2 -> 501 -> 500
+			  3 -> 
+	
+	open your gmails
+	Account -> security -> less secure app -> on
+	
+	 
+	settings.py
+	-----------
+	EMAIL_USE_TLS = True
+	EMAIL_HOST = 'smtp.gmail.com'
+	EMAIL_PORT = 587
+	EMAIL_HOST_USER = 'apssdcfdp4@gmail.com'
+	EMAIL_HOST_PASSWORD = ''
+	
+	
+	views.py:
+	---------
+	from django.core.mail import send_mail
+	from adminappname import settings
+	
+	sendmail(sb,msg,[snd])
+	
+	
+	
+	
+	
+	
+		
+	

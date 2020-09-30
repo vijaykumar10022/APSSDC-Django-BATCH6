@@ -1,0 +1,35 @@
+Good Morning to all..
+
+Today Agenda:
+	
+	1.inheritance(hybrid)
+		multiple+hierarchy=hybrid
+	
+	2.Python modules with examples
+			module=.py file-->group of all methods,functions, classes,vairables etc.. 
+			predefined
+				import math
+						sqrt,pow,sin,cos etc
+			user defined modules
+				-->import file 
+				-->from demo import A,B,C
+				-->from demo import *(all)
+				
+	3.Python Packages with examples
+			package=library(folders)
+					group of .py files
+					
+			repository:
+					Day1
+					Day2
+					Day3
+					
+			from Day3 import demo -->1st
+			from Day3.demo import *-->2nd
+			from Day3.demo import A,B,C -->3rd
+					
+	4.introdution about django
+	
+	5.MVC, MVT,Architecture of Django
+	
+	6.Project Creation, APP creation and use of admin app
