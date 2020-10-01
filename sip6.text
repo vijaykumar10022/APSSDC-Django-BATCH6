@@ -138,6 +138,157 @@
 	
 	=> url => views => browser
 	
+	
+	
+18-09-2020:
+===========
+	
+	Good Morning to All.....
+	
+	url:  => localhost:8000/ramu/
+	
+		  Hi welcome ramu => browser
+		  
+	url: => path('<str:name>/',views.prntname),
+	views:
+		=> def prntname(req,name):
+				return HttpResponse("Hi welcome {}".format(name))
+	
+	% print("%d and %d"%(a,b))
+	+ print(a+" and "+b)
+	. print("{1} and {0}".format(a,b))
+	
+	url: http://localhost:8000/naresh/23/
+	
+		Hi welcome naresh and your roll number is 23
+	
+	url: => path('<str:name>/<int:rl>/',views.prntnrl),
+	views:
+		=> def prntnrl(req,rl,name):
+				return HttpResponse("Hi welcome {} and your roll numeber is: {}".format(name,rl))
+				
+				
+19-09-2020:
+===========
+	Good Morning to All....
+
+	url -> views -> browser(response[html,css,javascript])
+	
+	.html -> template
+	
+	templates -> folder -> [userapp]
+	
+		demo -> login.html
+		sample -> login.html
+		
+	views:
+	render(request,'path of .html',{})
+	
+	url -> views -> .html[templates]
+	
+	url: localhost:8000/rajesh
+		 
+		 Hi welcome rajesh
+		 
+	views -> templates
+	
+		dictionary -> DTL[Django Template Language]
+	DTL:
+	===
+	
+	Variable -> {{a}}
+	conditional statements:
+	-----------------------
+	
+	{% if condition %}
+		//stmnt
+	{% endif %}
+	
+	{% if condition %}
+		//stmnt-1
+	{% else %}
+		//stmnt-2
+	{% endif%}
+	
+	{% if condition %}
+		//stmnt-1
+	{% elif condition %}
+		//stmnt-2
+	{% else %}
+		//stmnt-3
+	{% endif%}
+	
+	Iterations: [dictionary]
+	-------------
+	{% for iterationvariable in iterator %}
+		//stmnts
+		//iterationvariable
+	{% endfor %}
+	
+	static:
+	-------
+	css,js,images
+	
+	CSS => Cascading Style sheet:
+	----------------------------
+	- colors,font
+	- property:value
+	=> Inline -> inner of tag
+		Syntax:
+			<h1 style="color:red;font-size:12px">Hi</h1>
+	=> Internal -> inner of head tag but we need to use style tag
+		Syntax:
+		<head>
+		<style>
+		h3
+		{
+			background-color:green;
+			font-size:23px;
+		}
+		</style>
+		</head>
+		
+		<h3>This is sample</h3>
+	=> External -> seperate .css [style]
+		Syntax:
+		<head>
+		<link rel="stylesheet" href="css/first.css">
+		</head>
+	=> h3 -> id -> #,class -> .,
+	
+	-> demo -> static[css,images,js]
+				-> css
+					-> demo.css
+				-> js
+					-> sample.js
+				-> images
+					-> logo.png
+	=> .html
+		=> {% load static %}
+		=> <link rel="stylesheet" href="{% static 'css/sample.css' %}">
+		
+24-09-2020:
+===========
+
+	Good Morning to All...
+	
+	url -> views -> templates
+		   views <-	
+		   views -> templates
+	
+	project:
+	
+	sample
+		sample -> adminapp(settings,urls)
+		rah -> userapp(urls,views,templates,static)
+		manage.py
+		
+		Admin -> ?
+		roles -> ?
+		
+		ORM
+	
+	
 30-09-2020:
 ==========
 	
@@ -209,12 +360,48 @@ Mail sending:
 	from django.core.mail import send_mail
 	from adminappname import settings
 	
-	sendmail(sb,msg,[snd])
+	sendmail(sb,msg,df,[snd])
 	
 	
 	
+01-10-2020:
+===========
+	
+	Good Morning to All....
 	
 	
+	DTL: {% %}
+	-----
 	
-		
+	variable -> {{variablename}}
+	conditional statemnts,loop,dictionary.fieldname,
+	static,
+	include -> .html
+	extends -> first .html
 	
+	User Authentication and Authorization:
+	--------------------------------------
+	
+	roles,permissions,actions,
+	model,default
+	
+	Model -> class -> table -> fields
+	forms -> views -> .html
+	
+	Models -> X
+	
+	own Model -> migrations -> migrate
+	
+	existing model -> migrate
+	
+	Widgets:
+	--------
+	Bootstrap -> existing model -> fields
+	
+	
+	Registration -> Login -> username,password 
+
+
+
+
+

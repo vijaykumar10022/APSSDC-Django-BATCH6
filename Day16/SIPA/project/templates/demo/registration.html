@@ -1,0 +1,23 @@
+{% extends 'demo/base.html' %}
+{% block title %} User Registration {% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="card col-md-6 mx-auto mt-4 shadow-lg">
+		<div class="card-body">
+			<h3 class="bg-primary text-center text-light border rounded p-2">Registration</h3>
+			<form method="POST">
+				{% csrf_token %}
+				<table class="table table-borderless">
+					{% for m in y %}
+					<tr>
+						<td>{{m}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+				<input type="submit" class="btn btn-success btn-block" value="Register">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
