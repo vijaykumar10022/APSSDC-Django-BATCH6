@@ -1,0 +1,27 @@
+{% extends 'demo/base.html' %}
+{% block title %} Update {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-6 mx-auto mt-5">
+		<h3 class="bg-info text-light text-center border rounded p-2 mt-2">Update Profile</h3>
+		<div class="card-body">
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<table class="table table-borderless">
+					{% for n in f %}
+					<tr>
+						<td> {{n}} </td>
+					</tr>
+					{% endfor %}
+					{% for p in t %}
+					<tr>
+						<td> {{p}} </td>
+					</tr>
+					{% endfor %}
+				</table>
+				<input type="submit" class="btn btn-success btn-block" value="Update">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

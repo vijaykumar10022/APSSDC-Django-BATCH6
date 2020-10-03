@@ -1,0 +1,47 @@
+{% extends 'demo/base.html' %}
+{% block title %} Profile {{user.username}} {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row mt-4">
+		<div class="card col-md-4 mr-2">
+			<h3 class="bg-dark text-light text-center border rounded p-2 mt-2">Profile</h3>
+			<div class="card-body">
+				<img src="{{user.imgpfle.im.url}}" height="230px" width="100%">
+			</div>
+			<h4 class="bg-success text-light text-center border rounded p-2"> Hi, {{user.username}}</h4>
+		</div>
+		<div class="card col-md">
+			<h3 class="bg-primary text-light text-center border rounded p-2 mt-2">Details</h3>
+			<div class="card-body">
+				<table class="table table-borderless">
+					<tr>
+						<td>First Name : </td>
+						<td>{{user.first_name}}</td>
+					</tr>
+					<tr>
+						<td>Last Name : </td>
+						<td>{{user.last_name}}</td>
+					</tr>
+					<tr>
+						<td>UserName : </td>
+						<td>{{user.username}}</td>
+					</tr>
+					<tr>
+						<td>Email : </td>
+						<td>{{user.email}}</td>
+					</tr>
+					<tr>
+						<td>Date Joined : </td>
+						<td>{{user.date_joined}}</td>
+					</tr>
+					<tr>
+						<td>Last Joining : </td>
+						<td>{{user.last_login}}</td>
+					</tr>
+				</table>
+				<a href="{% url 'upf' %}" class="btn btn-warning"> Update </a>
+			</div>
+		</div>	
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'demo/base.html' %}
+{% block title %} Logout {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card col-md-6 mx-auto mt-5">
+		<h3> Logout </h3>
+		Are You sure you need to login again? <a href="{% url 'lg' %}" class="btn btn-success mb-2">Login again</a>
+	</div>
+</div>
+{% endblock content %} 

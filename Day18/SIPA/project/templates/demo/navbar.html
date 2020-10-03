@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="{% url 'hme' %}">Project</a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    {% if not user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'hme' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'abt' %}">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'ug' %}">Registration</a>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'hme' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'dsb' %}">Dashboard</a>
+    </li>
+    {% endif %}
+  </ul>
+  <ul class="navbar-nav ml-auto" style="margin-right:110px;">
+    {% if not user.is_authenticated %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'lg' %}">Login</a>
+    </li>
+    {% else %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Hi Welcome <img src="{{user.imgpfle.im.url}}" class="rounded-circle" height="25px" width="24px">
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="{% url 'pf' %}">Profile</a>
+        <a class="dropdown-item" href="{% url 'lgo' %}">Logout</a>
+      </div>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
