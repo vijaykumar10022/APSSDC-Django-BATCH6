@@ -287,7 +287,120 @@
 		roles -> ?
 		
 		ORM
+
 	
+30-09-2020:
+==========
+	
+	Good Morning to All....
+	
+	url -> views -> (response)
+	url -> views -> templates(.html)
+	url -> views -> templates(reg) -> views -> templates(welcome)
+	url -> views -> templates(re) -> views -> models -> templates
+	url -> views -> templates(re) -> views -> forms -> models   		
+								  -> views -> models -> html
+	
+	
+Messages:
+=========
+	
+	alert -> update (20% warning)
+	
+	update
+	delete
+	user login -> views
+	
+	success
+	warning 
+	debug
+	info
+	
+from django.contrib import messages
+
+
+	messages.success(request,"data to be displayed to user")
+	
+	
+html:
+=====
+	{% if messages %}
+	{% for e in messages %}
+	<div class="alert alert-{{e.tags}}">
+	{{e}}
+	</div>
+	{% endfor %}
+	{% endif %}
+
+Mail sending:
+=============
+
+	sender => 500 mails per/day
+	receiver
+	
+	python -> 1 -> 500
+			  2 -> 501 -> 500
+			  3 -> 
+	
+	open your gmails
+	Account -> security -> less secure app -> on
+	
+	 
+	settings.py
+	-----------
+	EMAIL_USE_TLS = True
+	EMAIL_HOST = 'smtp.gmail.com'
+	EMAIL_PORT = 587
+	EMAIL_HOST_USER = 'apssdcfdp4@gmail.com'
+	EMAIL_HOST_PASSWORD = ''
+	
+	
+	views.py:
+	---------
+	from django.core.mail import send_mail
+	from adminappname import settings
+	
+	sendmail(sb,msg,df,[snd])
+	
+	
+	
+01-10-2020:
+===========
+	
+	Good Morning to All....
+	
+	
+	DTL: {% %}
+	-----
+	
+	variable -> {{variablename}}
+	conditional statemnts,loop,dictionary.fieldname,
+	static,
+	include -> .html
+	extends -> first .html
+	
+	User Authentication and Authorization:
+	--------------------------------------
+	
+	roles,permissions,actions,
+	model,default
+	
+	Model -> class -> table -> fields
+	forms -> views -> .html
+	
+	Models -> X
+	
+	own Model -> migrations -> migrate
+	
+	existing model -> migrate
+	
+	Widgets:
+	--------
+	Bootstrap -> existing model -> fields
+	
+	
+	Registration -> Login -> username,password 
+
 
 
 
